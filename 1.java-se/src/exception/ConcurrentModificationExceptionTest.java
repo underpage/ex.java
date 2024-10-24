@@ -10,9 +10,7 @@ public class ConcurrentModificationExceptionTest {
 
 	// ConcurrentModificationException
 	// : 수정이 허용되지 않는 경우에 수정을 시도할 경우 발생
-	
-	
-	
+
 	@Test
 	public void test() {
 		
