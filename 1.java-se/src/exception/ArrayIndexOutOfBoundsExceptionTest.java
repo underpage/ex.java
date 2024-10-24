@@ -13,7 +13,6 @@ public class ArrayIndexOutOfBoundsExceptionTest {
 		try {
 			
 			final int[] arr = {1,2,3,4,5};
-			
 			System.out.println(arr[5]);
 		
 		} catch(ArrayIndexOutOfBoundsException e) {
