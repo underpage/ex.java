@@ -15,14 +15,13 @@ public class ClassLoaderTest {
 	// : 자바 프로그램은 여러 클래스 로더가 존재하며 계층 구조를 형성  
 	// : 클래스 로더를 통해 로딩된 클래스들은 언로딩 될 수 없음  
 	
-	// Bootstrap ClassLoader
+	// 1. Bootstrap ClassLoader
 	// : 최상위 클래스 로더로 JVM 실행시 가장 먼저 실행
 	// : 네이티브 코드로 구현되어 있음
 	
-	// Platform ClassLoader
-	// System ClassLoader
-	// Application ClassLoader
-	// 사용자 정의 클래스 로더
+	// 2. Platform ClassLoader (Extension ClassLoader)
+	// 3. System ClassLoader (Application ClassLoader)
+	// 4. 사용자 정의 클래스 로더
 	
 	class CustomClassLoader extends ClassLoader {
 		

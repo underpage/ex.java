@@ -6,7 +6,7 @@ import org.junit.Test;
 public class NullPointerExceptionTest {
 
 	// NullPointerException
-	// : 인스턴스를 생성하지 않았는데 객체 참조시 발생  
+	// : 인스턴스를 생성하지 않았는데 객체를 참조할 경우 발생  
 
 	@SuppressWarnings("null")
 	@Test
@@ -15,9 +15,7 @@ public class NullPointerExceptionTest {
 		try {
 			
 			final Integer integer = null;
-			final int i = integer.intValue();
-			
-			System.out.println(i);
+			System.out.println(integer.intValue());
 			
 		} catch(NullPointerException e) {
 			e.printStackTrace();
@@ -43,7 +41,6 @@ public class NullPointerExceptionTest {
 	@Test @Ignore
 	public void methodTest() {
 		
-		// 주의
 		final Object result = this.method(null);
 		System.out.println(result);
 	

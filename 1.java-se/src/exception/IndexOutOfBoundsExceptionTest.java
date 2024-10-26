@@ -9,6 +9,7 @@ public class IndexOutOfBoundsExceptionTest {
 
 	// IndexOutOfBoundsException
 	// : 범위를 벗어나는 인덱스로 접근을 시도하는 경우 발생  
+	// : 문자열, 배열, 자료구조에서 발생
 	
 	// + ArrayIndexOutOfBoundsException
 	// + StringIndexOutOfBoundsException

@@ -6,7 +6,7 @@ public class NumberFormatExceptionTest {
 
 	// NumberFormatException
 	// : 문자열을 숫자 타입으로 변환할 수 없는 경우 발생   
-	// : 변환시 숫자 타입의 범위를 벗어날 경우에도 발생 
+	// : 변환이 가능한 경우 숫자 타입의 범위를 벗어난 경우에 발생 
 
 	@Test
 	public void test() {
@@ -22,9 +22,7 @@ public class NumberFormatExceptionTest {
 			//final String str = "0,1"; 
 			
 			final String str = null;
-			int i = Integer.parseInt(str);
-			
-			System.out.println(i);
+			System.out.println(Integer.parseInt(str));
 			
 		} catch (NumberFormatException e) {
 			e.printStackTrace();
