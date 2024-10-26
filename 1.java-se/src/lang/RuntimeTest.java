@@ -62,16 +62,16 @@ public class RuntimeTest {
 
 			String charset;
 			String[] command;
-	        String os = System.getProperty("os.name").toLowerCase();
-	        
-	        if(os.contains("windows")) {
-	        	charset = "EUC-KR";
-	            command = new String[] {"cmd", "/c", "dir"};
-	        } else {
-	        	charset = "UTF-8";
-	            command = new String[] {"ls", "-l"};
-	        }
-	        
+			String os = System.getProperty("os.name").toLowerCase();
+			
+			if(os.contains("windows")) {
+				charset = "EUC-KR";
+				command = new String[] {"cmd", "/c", "dir"};
+			} else {
+				charset = "UTF-8";
+				command = new String[] {"ls", "-l"};
+			}
+
 			process = runtime.exec(command);
 			reader = new BufferedReader(new InputStreamReader(process.getInputStream(), charset));
 			
