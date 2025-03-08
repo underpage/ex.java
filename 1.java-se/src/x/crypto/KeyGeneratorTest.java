@@ -15,7 +15,7 @@ public class KeyGeneratorTest {
 	@Test
 	public void test() throws NoSuchAlgorithmException {
 		
-		// 주어진 알고리즘의 KeyGenerator 객체 생성
+		// 주어진 암호화 알고리즘의 KeyGenerator 객체 생성
         KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
 		
         // 키 크기 초기화

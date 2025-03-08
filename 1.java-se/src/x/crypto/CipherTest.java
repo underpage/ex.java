@@ -26,8 +26,8 @@ public class CipherTest {
         keyGenerator.init(128);
         SecretKey secretKey = keyGenerator.generateKey();
         
-		// 지정한 알고리즘을 통해 Cipher 객체 생성
-        // 알고리즘 지정시 모드와 패딩 방식을 추가할 수 있음
+		// 지정한 암호화 알고리즘을 통해 Cipher 객체 생성
+        // 암호화 알고리즘 지정시 모드와 패딩 방식을 추가할 수 있음
 		Cipher c = Cipher.getInstance("AES/GCM/NoPadding");
 		
 		// 지정한 키로 암호화나 복호화를 초기화함

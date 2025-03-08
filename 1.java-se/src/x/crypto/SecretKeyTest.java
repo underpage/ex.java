@@ -16,7 +16,6 @@ public class SecretKeyTest {
 	@Test
 	public void test() throws NoSuchAlgorithmException {
 		
-		// 주어진 알고리즘으로 KeyGenerator 객체 생성
         KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
         keyGenerator.init(128);
 
