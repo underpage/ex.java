@@ -20,14 +20,14 @@ public class MacTest {
 	@Test
 	public void test() throws NoSuchAlgorithmException, InvalidKeyException {
 		
-        KeyGenerator keyGenerator = KeyGenerator.getInstance("HmacSHA256");
-        keyGenerator.init(256);
-        SecretKey secretKey = keyGenerator.generateKey();
+		KeyGenerator keyGenerator = KeyGenerator.getInstance("HmacSHA256");
+		keyGenerator.init(256);
+		SecretKey secretKey = keyGenerator.generateKey();
         
 		// 지정한 MAC 알고리즘을 통해 MAC 객체 생성
 		Mac mac = Mac.getInstance("HmacSHA256");
 		
-		// 지정된 키로 초기화
+		// 지정한 키로 초기화
 		mac.init(secretKey);
 		
 		// 주어진 데이터로 업데이트

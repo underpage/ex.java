@@ -26,9 +26,9 @@ public class CipherTest {
 		InvalidKeyException, IllegalBlockSizeException, BadPaddingException, InvalidAlgorithmParameterException {
 		
 		// 대칭키 생성
-        KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
-        keyGenerator.init(128);
-        SecretKey secretKey = keyGenerator.generateKey();
+		KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
+		keyGenerator.init(128);
+		SecretKey secretKey = keyGenerator.generateKey();
         
         // 초기화 벡터 생성
         byte[] iv = new byte[12];
