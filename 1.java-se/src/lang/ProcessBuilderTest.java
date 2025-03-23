@@ -36,7 +36,7 @@ public class ProcessBuilderTest {
 		
 		// 명령어 지정
 		pb.command(new String[] {"curl", "https://google.com"});
-
+		
 		// 환경 변수 지정
 		pb.environment().put("VAR_NAME", "value");
 		
@@ -45,7 +45,7 @@ public class ProcessBuilderTest {
 		
 		// 프로세스 실행
 		Process p = pb.start();
-
+		
 		// 타임 아웃 설정
 		// 명령어가 5초이내 완료되지 않으면 TimeoutException 발생
 		p.waitFor(5, TimeUnit.SECONDS);
@@ -58,7 +58,7 @@ public class ProcessBuilderTest {
 		
 		// 오류 읽기
 		p.getErrorStream();
-
+		
 		// 입력을 파일로 리다이렉션
 		pb.redirectInput(ProcessBuilder.Redirect.from(new File("input.txt")));
 		
@@ -69,10 +69,10 @@ public class ProcessBuilderTest {
 		pb.redirectError(ProcessBuilder.Redirect.to(new File("error.txt")));
 		
 		// 프로세스 종료 코드 반환
-	    p.waitFor();
-	    
-	    // 정상 종료 시도
-	    p.destroy();
+		p.waitFor();
+		
+		// 정상 종료 시도
+		p.destroy();
 
 	    // 강제 종료
 	    p.destroyForcibly();
@@ -86,21 +86,21 @@ public class ProcessBuilderTest {
 		try {
 			
 			ProcessBuilder pb = new ProcessBuilder();
-			
+		
 			// 명령어 지정
 			pb.command(new String[] {"curl", "https://google.com"});
-
+		
 			// 결과와 오류를 하나로 합침
 			pb.redirectErrorStream(true);
 			
 			// 프로세스 실행
 			Process p = pb.start();
-
+			
 			boolean completed = p.waitFor(5, TimeUnit.SECONDS);
 			if(!completed) {
 				p.destroy();
 			}
-			
+		
 			// 결과 읽기
 			try(BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()))) {
 				String line = null;
@@ -109,9 +109,9 @@ public class ProcessBuilderTest {
 				}
 			}
 			
-		    int exitCode = p.waitFor();
-		    System.out.println(exitCode);
-		    
+			int exitCode = p.waitFor();
+			System.out.println(exitCode);
+			
 		    
 		} catch (IOException | InterruptedException  e) {
 			e.printStackTrace();
