@@ -36,6 +36,19 @@ public class BeanDescriptorTest {
 		
 		// 주어진 빈의 속성값 반환
 		descriptor.getValue("속성");
+		
+		// 빈의 클래스 반환
+		descriptor.getBeanClass();
+		
+		// 고급 사용자 속성 지정
+		// IDE에서 고급 모드나 전문가 모드에만 속성을 노출함
+		descriptor.setExpert(true);
+		
+		// 사용자에게 속성을 숨길지 여부 지정
+		descriptor.setHidden(true);
+		
+		// 사용자에게 속성을 우선적으로 보여줄지 여부 지정
+		descriptor.setPreferred(true);
 
 	}
 	
